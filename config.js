@@ -3,7 +3,7 @@ import { reactive } from "./lib/petite-vue.js";
 // Config Data to set the app's data and methods
 const config = reactive({
   BASE_URL: '/',
-  routeView: '', 
+  routeView: '',
   route: "home",
   routeView: "null",
   cssFiles: [],
@@ -22,10 +22,10 @@ const config = reactive({
   // Page Resources like CSS and JS
   resources: {
     index: {
-      path: '/home', 
+      path: '/home',
       view: {
         primary: '../assets/templates/route/index.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',
@@ -39,10 +39,10 @@ const config = reactive({
       }
     },
     publications: {
-      path: '/publications', 
+      path: '/publications',
       view: {
         primary: '../assets/templates/route/publications.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',
@@ -55,12 +55,11 @@ const config = reactive({
         albumData: 'path/to/album-data.json',
       }
     },
-    
     musicpool: {
-      path: '/musicpool', 
+      path: '/musicpool',
       view: {
         primary: '../assets/templates/route/musicpool.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: '../../assets/images/albums/colourfullight.jpg',
@@ -74,10 +73,10 @@ const config = reactive({
       }
     },
     bio: {
-      path: '/bio', 
+      path: '/bio',
       view: {
         primary: '../assets/templates/route/bio.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',
@@ -89,12 +88,12 @@ const config = reactive({
       json: {
         albumData: 'path/to/album-data.json',
       }
-    }, 
+    },
     upcoming: {
-      path: '/upcoming', 
+      path: '/upcoming',
       view: {
         primary: '../assets/templates/route/upcoming.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',
@@ -106,12 +105,12 @@ const config = reactive({
       json: {
         albumData: 'path/to/album-data.json',
       }
-    }, 
+    },
     cookies: {
-      path: '/cookies', 
+      path: '/cookies',
       view: {
         primary: '../assets/templates/route/cookies.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',
@@ -123,12 +122,12 @@ const config = reactive({
       json: {
         albumData: 'path/to/album-data.json',
       }
-    }, 
+    },
     notFound: {
-      path: '/notFound', 
+      path: '/notFound',
       view: {
         primary: '../assets/templates/route/notFound.js',
-      }, 
+      },
       images: {
         albumCover1: 'assets/images/logo.png',
         albumCover2: 'assets/images/albums/colourfullight.jpg',

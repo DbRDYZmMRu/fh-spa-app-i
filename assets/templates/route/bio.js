@@ -1,5 +1,5 @@
 import { store } from  "../../../global.js";
 
-export const blog = `
+export const bio = `
 <p>Blog</p>
 `;

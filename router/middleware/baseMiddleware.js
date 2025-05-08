@@ -9,12 +9,6 @@ import { routePageLoader } from '../../runtime/app/routePageLoader.js';
 import { routePageData } from "../routeFilter.js";
 
 
-
-
-
-
-
-
 /**
  * Middleware to handle group-level resources and templates.
  */

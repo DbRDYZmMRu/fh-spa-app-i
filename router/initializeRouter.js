@@ -4,10 +4,6 @@ import { routePrep } from "./middleware/loadData.js";
 import { store } from "../global.js";
 
 
-
-
-
-
 /**
  * Initializes the router with middleware.
  */

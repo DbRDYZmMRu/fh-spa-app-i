@@ -1,3 +1,3 @@
-export const discover = `
+export const upcoming = `
 <p>Discover</p>
 `;
