@@ -1,5 +1,7 @@
 export function setupLoader() {
   
+  document.body.style.display = '';
+  
   const loader = document.querySelector('.template-loader');
 if (loader) {
 setTimeout(() => {

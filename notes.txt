@@ -4,159 +4,72 @@
 
 
 
-Here's the CSS files in the desired format:
+
+
+
+
+Here's how you can add a conditional to every template except `pageLoader`:
 
 ```
-"cssFiles": [
-"css/font-awesome/all.min.css",
-"css/feather/iconfont.css",
-"css/pe-icon-stroke/Pe-icon-7-stroke.css",
-"css/simple-line-icons/simple-line-icons.css",
-"css/themify-icons/themify-icons.css",
-"css/swiper/swiper.min.css",
-"css/magnific-popup/magnific-popup.css",
-"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css",
-"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css",
-"https://unpkg.com/boxicons@2.0.3/css/boxicons.min.css",
-"./style.css"
-],
+let templates = {
+pageLoader: { template: pageLoader },
+header: someCondition && { template: header },
+routerView: someCondition && { template: routerView },
+footer: someCondition && { template: footer },
+cookiesPrompt: someCondition && { template: cookiesPrompt }
+};
 ```
 
-Note that I removed the duplicate link to "css/pe-icon-stroke/Pe-icon-7-stroke.css" to avoid redundancy. Let me know if you need further assistance!
-
-
-
-
-
-
-
-
-Preventing Default Behavior with page.js
-To prevent clicks on `#` from loading or reloading the page when using page.js, you can use one of the following approaches:
-
-*1. Prevent Default Behavior*
-You can add an event listener to the link and prevent the default behavior:
+However, this will result in `null` or `false` values for the properties when the condition is not met. To avoid this, you can use the following approach:
 
 ```
-$(document).on('click', 'a[href="#"]', function(event) {
-event.preventDefault();
+let templates = {
+pageLoader: { template: pageLoader },
+};
+
+if (someCondition) {
+templates.header = { template: header };
+templates.routerView = { template: routerView };
+templates.footer = { template: footer };
+templates.cookiesPrompt = { template: cookiesPrompt };
+}
+```
+
+Alternatively, you can use a loop to add the templates conditionally:
+
+```
+let templates = {
+pageLoader: { template: pageLoader },
+};
+
+const templateList = ['header', 'routerView', 'footer', 'cookiesPrompt'];
+if (someCondition) {
+templateList.forEach((templateName) => {
+templates[templateName] = { template: eval(templateName) };
 });
+}
 ```
 
-*2. Use page.js's Built-in Mechanism*
-page.js provides a way to handle links with `#` by using the `click` event and calling `event.preventDefault()`:
+Note that using `eval` can be a security risk if you're not controlling the input. If the template names are fixed, you can use an object to map the template names to their corresponding variables:
 
 ```
-page('/', function(ctx, next) {
-// Your route handler
+let templates = {
+pageLoader: { template: pageLoader },
+};
+
+const templateList = {
+header,
+routerView,
+footer,
+cookiesPrompt,
+};
+
+if (someCondition) {
+Object.keys(templateList).forEach((templateName) => {
+templates[templateName] = { template: templateList[templateName] };
 });
-
-// Add this to prevent default behavior on links with #
-$(document).on('click', 'a', function(event) {
-if (this.hash && this.href === location.href + this.hash) {
-event.preventDefault();
-}
-});
-```
-
-*3. Modify Links*
-If you have control over the HTML, you can modify the links to use `javascript:void(0)` instead of `#`:
-
-```
-<a href="javascript:void(0)">Link</a>
-```
-
-By using one of these approaches, you can prevent clicks on `#` from loading or reloading the page when using page.js.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Here's the equivalent code in vanilla JavaScript:
-
-```
-const loader = document.querySelector('.template-loader');
-if (loader) {
-setTimeout(() => {
-loader.style.opacity = 0;
-loader.style.transition = 'opacity 0.1s';
-setTimeout(() => {
-loader.style.display = 'none';
-}, 100); // 100ms = 0.1s fade out duration
-}, 3000); // 3000ms = 3s delay
 }
 ```
-
-However, if you want a more precise equivalent with fadeOut functionality like jQuery, you can use the following code:
-
-```
-const loader = document.querySelector('.template-loader');
-if (loader) {
-setTimeout(() => {
-loader.style.opacity = 1;
-loader.style.transition = 'opacity 0.1s';
-setTimeout(() => {
-loader.style.opacity = 0;
-}, 0);
-setTimeout(() => {
-loader.style.display = 'none';
-}, 100); // 100ms = 0.1s fade out duration
-}, 3000); // 3000ms = 3s delay
-}
-```
-
-Or using CSS keyframes or transitions with JavaScript:
-
-```
-const loader = document.querySelector('.template-loader');
-if (loader) {
-loader.classList.add('fade-out');
-setTimeout(() => {
-loader.style.display = 'none';
-}, 100); // 100ms = 0.1s fade out duration
-}
-```
-
-And add this CSS:
-
-```
-.template-loader {
-opacity: 1;
-transition: opacity 0.1s;
-}
-
-.template-loader.fade-out {
-opacity: 0;
-}
-```
-
-With a delay:
-
-```
-const loader = document.querySelector('.template-loader');
-if (loader) {
-setTimeout(() => {
-loader.classList.add('fade-out');
-setTimeout(() => {
-loader.style.display = 'none';
-}, 100); // 100ms = 0.1s fade out duration
-}, 3000); // 3000ms = 3s delay
-}
-```
-
 
 
 

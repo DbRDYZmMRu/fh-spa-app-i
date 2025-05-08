@@ -15,7 +15,7 @@ import { routePageData } from "../routeFilter.js";
 export async function baseMiddleware(ctx, next) {
   
   //Hide the page's content as the DOM loads
-  //document.body.style.display = 'none';
+  document.body.style.display = 'none';
   
   // Assign the store's route key the current path value
   store.route = ctx.pathname;
@@ -58,11 +58,8 @@ export async function baseMiddleware(ctx, next) {
     store.cssFiles.push(...routeCssFiles);
   }
   
-  if (store.renderCount == 0) {
-    // Render the layout components
-    renderComponents();
-  }
-  
+  // Render the layout components
+  renderComponents();
   
   //Load the router path content just before the JS is loaded
   routePageData();

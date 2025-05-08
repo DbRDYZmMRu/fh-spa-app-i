@@ -13,24 +13,21 @@ import { footer } from "../../assets/templates/layout/footer.js";
 
 
 let templates = {
-  pageLoader: {
-    template: pageLoader
-  }, 
-  header: {
-    template: header
-  },
-  routerView: {
-    template: routerView
-  },
-  footer: {
-    template: footer
-  }, 
-  cookiesPrompt: {
-    template: cookiesPrompt
-  } 
-  
+  pageLoader: { template: pageLoader },
 };
 
+const templateList = {
+  header,
+  routerView,
+  footer,
+  cookiesPrompt,
+};
+
+if (store.renderCount == 0) {
+  Object.keys(templateList).forEach((templateName) => {
+    templates[templateName] = { template: templateList[templateName] };
+  });
+}
 export function addTemplate(templateId, templateHtml) {
   console.log(templateId);
   templates[templateId] = {
