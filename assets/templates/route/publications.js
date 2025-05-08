@@ -167,5 +167,4 @@ export const publications = `
 			</div>
 		</section>
 
-
 `;
