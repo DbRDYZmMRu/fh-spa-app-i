@@ -14,7 +14,7 @@ export const musicpool = `
 <!-- Album 15 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(15)">
 			<div class="gradient-wrap">
-				<img :src="store['resources']['musicpool']['images']['albumCover2']" alt="Valence Eve" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['ValenceEve']" alt="Valence Eve" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -59,7 +59,7 @@ export const musicpool = `
 		<!-- Album 14 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(14)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/farthermemes.png" alt="Farther Memes" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['farthermemes']" alt="Farther Memes" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -116,7 +116,7 @@ export const musicpool = `
 		<!-- Album 13 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(13)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/theSessions.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['theSessions']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -154,7 +154,7 @@ export const musicpool = `
 		<!-- Album 12 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(12)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/itspop.png" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['itspop']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -200,7 +200,7 @@ export const musicpool = `
 		<!-- Album 11 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(11)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/Troubadour.png" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['Troubadour']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -247,7 +247,7 @@ export const musicpool = `
 		<!-- Album 10 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(10)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/Nightswan.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['Nightswan']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -294,7 +294,7 @@ export const musicpool = `
 		<!-- Album 9 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(9)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/theLovertap3.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['theLovertap3']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -327,7 +327,7 @@ export const musicpool = `
 		<!-- Album 8 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(8)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/lantern.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['lantern']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -374,7 +374,7 @@ export const musicpool = `
 		<!-- Album 7 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(7)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/theo.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['theo']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -434,7 +434,7 @@ export const musicpool = `
 		<!-- Album 6 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(6)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/jacaranda.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['jacaranda']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -480,7 +480,7 @@ export const musicpool = `
 		<!-- Album 5 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(5)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/screentime.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['screentime']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -538,7 +538,7 @@ export const musicpool = `
 		<!-- Album 4 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(4)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/frith.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['frith']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -585,7 +585,7 @@ export const musicpool = `
 		<!-- Album 3 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(3)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/december13.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['december13']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -634,7 +634,7 @@ export const musicpool = `
 		<!-- Album 2 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(2)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/colourfullight.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['colourfullight']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">
@@ -688,7 +688,7 @@ export const musicpool = `
 		<!-- Album 1 -->
 		<div class="gradient-item" @click="store.showAlbumTracks(1)">
 			<div class="gradient-wrap">
-				<img src="../images/albums/hiv.jpg" alt="" crossorigin="anonymous">
+				<img :src="store['resources']['musicpool']['images']['hiv']" alt="" crossorigin="anonymous">
 			</div>
 		</div>
 		<section class="py-4 bg-black">

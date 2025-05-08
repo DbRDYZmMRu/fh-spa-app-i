@@ -8,67 +8,26 @@
 
 
 
-Here's how you can add a conditional to every template except `pageLoader`:
+Here is the updated object with the new path:
 
 ```
-let templates = {
-pageLoader: { template: pageLoader },
-header: someCondition && { template: header },
-routerView: someCondition && { template: routerView },
-footer: someCondition && { template: footer },
-cookiesPrompt: someCondition && { template: cookiesPrompt }
+const images = {
+ValenceEve: '../../assets/images/albums/ValenceEve.jpg',
+farthermemes: '../../assets/images/albums/farthermemes.png',
+theSessions: '../../assets/images/albums/theSessions.jpg',
+itspop: '../../assets/images/albums/itspop.png',
+Troubadour: '../../assets/images/albums/Troubadour.png',
+Nightswan: '../../assets/images/albums/Nightswan.jpg',
+theLovertap3: '../../assets/images/albums/theLovertap3.jpg',
+lantern: '../../assets/images/albums/lantern.jpg',
+theo: '../../assets/images/albums/theo.jpg',
+jacaranda: '../../assets/images/albums/jacaranda.jpg',
+screentime: '../../assets/images/albums/screentime.jpg',
+frith: '../../assets/images/albums/frith.jpg',
+december13: '../../assets/images/albums/december13.jpg',
+colourfullight: '../../assets/images/albums/colourfullight.jpg',
+hiv: '../../assets/images/albums/hiv.jpg'
 };
-```
-
-However, this will result in `null` or `false` values for the properties when the condition is not met. To avoid this, you can use the following approach:
-
-```
-let templates = {
-pageLoader: { template: pageLoader },
-};
-
-if (someCondition) {
-templates.header = { template: header };
-templates.routerView = { template: routerView };
-templates.footer = { template: footer };
-templates.cookiesPrompt = { template: cookiesPrompt };
-}
-```
-
-Alternatively, you can use a loop to add the templates conditionally:
-
-```
-let templates = {
-pageLoader: { template: pageLoader },
-};
-
-const templateList = ['header', 'routerView', 'footer', 'cookiesPrompt'];
-if (someCondition) {
-templateList.forEach((templateName) => {
-templates[templateName] = { template: eval(templateName) };
-});
-}
-```
-
-Note that using `eval` can be a security risk if you're not controlling the input. If the template names are fixed, you can use an object to map the template names to their corresponding variables:
-
-```
-let templates = {
-pageLoader: { template: pageLoader },
-};
-
-const templateList = {
-header,
-routerView,
-footer,
-cookiesPrompt,
-};
-
-if (someCondition) {
-Object.keys(templateList).forEach((templateName) => {
-templates[templateName] = { template: templateList[templateName] };
-});
-}
 ```
 
 

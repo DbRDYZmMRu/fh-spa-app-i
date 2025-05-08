@@ -61,8 +61,21 @@ const config = reactive({
         primary: '../assets/templates/route/musicpool.js',
       },
       images: {
-        albumCover1: 'assets/images/logo.png',
-        albumCover2: '../../assets/images/albums/colourfullight.jpg',
+        ValenceEve: '../../assets/images/albums/ValenceEve.jpg',
+        farthermemes: '../../assets/images/albums/farthermemes.png',
+        theSessions: '../../assets/images/albums/theSessions.jpg',
+        itspop: '../../assets/images/albums/itspop.png',
+        Troubadour: '../../assets/images/albums/Troubadour.png',
+        Nightswan: '../../assets/images/albums/Nightswan.jpg',
+        theLovertap3: '../../assets/images/albums/theLovertap3.jpg',
+        lantern: '../../assets/images/albums/lantern.jpg',
+        theo: '../../assets/images/albums/theo.jpg',
+        jacaranda: '../../assets/images/albums/jacaranda.jpg',
+        screentime: '../../assets/images/albums/screentime.jpg',
+        frith: '../../assets/images/albums/frith.jpg',
+        december13: '../../assets/images/albums/december13.jpg',
+        colourfullight: '../../assets/images/albums/colourfullight.jpg',
+        hiv: '../../assets/images/albums/hiv.jpg'
       },
       media: {
         song1: 'path/to/song-1.mp3',
