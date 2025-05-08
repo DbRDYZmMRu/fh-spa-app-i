@@ -6,7 +6,7 @@ export const header = `
 		<header class="header">
 			<nav class="navbar navbar-light navbar-expand-lg navbar-default">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="/">
+					<a class="navbar-brand" @click.prevent="store.directPath('/home')" href="#">
 						<img class="logo" src="/images/logo.png" alt="Frith Hilton Logo">
 					</a>
 					<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
