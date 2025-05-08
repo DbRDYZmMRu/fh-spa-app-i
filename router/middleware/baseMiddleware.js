@@ -80,7 +80,7 @@ export async function baseMiddleware(ctx, next) {
     }
   }
   
-  if (routeJsFiles.length > 0 && store.renderCount == 0) {
+  if (routeJsFiles.length > 0) {
     routeJsFiles.forEach((file) => loadJS(file, store.BASE_URL));
     store.jsFiles.push(...routeJsFiles);
   }
