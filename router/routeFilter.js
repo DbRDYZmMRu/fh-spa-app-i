@@ -21,7 +21,6 @@ export async function routePageData() {
     const routeFilterData = routeFilter();
     const routeViewID = routeFilterData.resourceName;
     const routerViewData = routeFilterData.viewPrimary;
-    console.log(routerViewData);
     
     const viewModule = await import(routerViewData);
     const viewData = viewModule[routeViewID];

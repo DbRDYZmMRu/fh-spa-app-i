@@ -1272,8 +1272,7 @@ if (_lorder.length > 0) {
 		 * Get Full year
 		 * ------------------------------------------------------------------------ */
 
-		var _getFullYear = document.getElementById("getFullYear").innerHTML = new Date().getFullYear();
-
+document.getElementById("getFullYear").innerHTML = new Date().getFullYear();
 		/* ------------------------------------------------------------------------
 
 const imageSources = [

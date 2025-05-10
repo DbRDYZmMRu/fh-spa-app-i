@@ -2,7 +2,7 @@ import { loadCSS, loadJS } from "../../runtime/assets/index.js";
 import { unloadAllResources, fetchTemplate } from "./resourceManager.js";
 import { store } from "../../global.js";
 import { renderComponents } from "../../runtime/app/renderTemplate.js";
-import { setupLoader } from "../../assets/js/helpers/loader.js";
+import { prepPage } from "../../assets/js/helpers/prepPage.js";
 import { pageLoader } from "../../../assets/templates/components/pageLoader.js";
 import { routePageLoader } from '../../runtime/app/routePageLoader.js';
 
@@ -64,8 +64,8 @@ export async function baseMiddleware(ctx, next) {
   //Load the router path content just before the JS is loaded
   routePageData();
   
-  // Now that the DOM is ready, add a loading animation 
-  setupLoader();
+  // Now that the DOM is ready, run some vital scripts 
+  prepPage();
   
   if (groupJsFiles.length > 0 && store.renderCount == 0) {
     try {
