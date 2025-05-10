@@ -1,3 +1,5 @@
+import * as g from "../../../global.js";
+
 export function prepPage() {
   
   // Display page and throw in a loading image for a while
@@ -18,5 +20,14 @@ export function prepPage() {
   
   // Add current year to the footer
   document.getElementById("getFullYear").innerHTML = new Date().getFullYear();
+  
+  const myModal = document.getElementById('myModal');
+  
+  if (!g.storage.local.get('cookieUse')) {
+    myModal.classList.add('show');
+    myModal.style.display = 'block';
+    
+
+  }
   
 }

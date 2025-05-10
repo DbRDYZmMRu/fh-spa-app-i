@@ -67,7 +67,7 @@ export async function baseMiddleware(ctx, next) {
   // Now that the DOM is ready, run some vital scripts 
   prepPage();
   
-  if (groupJsFiles.length > 0 && store.renderCount == 0) {
+  if (groupJsFiles.length > 0) {
     try {
       for (const file of groupJsFiles) {
         await loadJS(file, store.BASE_URL);

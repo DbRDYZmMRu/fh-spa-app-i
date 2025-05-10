@@ -1,3 +1,5 @@
-export function sayHello() {
-  document.getElementById("getFullYear").innerHTML = new Date().getFullYear();
+import * as g from '../global.js';
+
+export function acceptCookieUse() {
+  g.storage.local.set('cookieUse', true);
 }

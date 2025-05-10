@@ -24,7 +24,8 @@ const config = reactive({
 		global: {
 			path: '/',
 			images: {
-				logo: '../../assets/images/logo.png',
+				logo: '../../assets/images/global/logo.png',
+				cookies: '../../assets/images/global/cookies.svg',
 			}
 		},
 		index: {
